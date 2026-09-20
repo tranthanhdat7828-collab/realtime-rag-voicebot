@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Realtime RAG Voicebot</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- Logo / Tên hệ thống -->
+            <div class="logo-section">
+                <h1>Realtime RAG</h1>
+                <p>Voicebot System</p>
+            </div>
+
+            <!-- Upload -->
+            <div class="upload-section">
+
+                <h2>Upload File</h2>
+
+                <input type="file" id="fileInput">
+
+                <button id="uploadBtn">
+                    Upload
+                </button>
+
+                <div id="uploadResult"></div>
+
+            </div>
+
+            <!-- Danh sách file -->
+            <div class="file-list-section">
+
+                <h2>Knowledge Base</h2>
+
+                <div id="knowledgeList">
+
+                    <div class="empty-file">
+                        Chưa có file nào
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CHAT -->
+        <main class="chat-container">
+
+            <!-- Lịch sử chat -->
+            <div id="chatBox">
+
+            </div>
+
+            <!-- Ô nhập -->
+            <form id="chatForm" class="input-area">
+                <input type="text" id="questionInput" placeholder="Nhập câu hỏi..." autocomplete="off">
+                <button type="button" id="sendBtn">Gửi</button>
+            </form>
+
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
